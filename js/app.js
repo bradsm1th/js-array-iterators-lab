@@ -61,16 +61,22 @@ console.log(theAda);
 
 // Array.prototype.reduce()
 // 5. How many years did all the inventors live?
-
-
-// i can't get it with reduce, so here it is with forEach ¯\_(ツ)_/¯
+// i couldn't get it with reduce at first, so here it is with forEach ¯\_(ツ)_/¯
+console.log("/////////// forEach() total years lived /////////");
 let totalYears = 0;
 inventors.forEach(person => {
   let age = person.passed - person.year;
-  console.log(`${person.first} lived ${age} years`)
+  // console.log(`${person.first} lived ${age} years`)
   totalYears += age;
 });
 console.log(`They all lived ${totalYears} years…`);
+
+console.log("/////////// reduce() total years lived /////////");
+const reducedTotalYears = inventors.reduce((totalSoFar, thisObj) =>
+  totalSoFar + (thisObj.passed - thisObj.year), 0);
+console.log(reducedTotalYears);
+
+
 
 
 
