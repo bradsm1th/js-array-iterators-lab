@@ -37,7 +37,7 @@ console.log(oldies);
 // Array.prototype.map()
 // 2. Map the array of the inventors into a new array containing objects with just the first and last names as properties
 // Hint:  Return a new object literal from the callback (don't mutate the object being passed in to map)
-const namesOnly = inventors.map(person => 
+const namesOnly = inventors.map(person =>
   console.log(person)
 );
 // console.log(namesOnly);
@@ -84,7 +84,25 @@ const data = [
 // Array.prototype.reduce()
 // 7. Count the number of instances for each of the data items. The reduce should return an object where the keys are 'car', 'truck', etc. and the values are the count.
 // Hint: Since you want to return an object, be sure to pass an empty {} for the initial value of the "accumulator".
+let allTheVehicles = data.reduce((tallyForThisOne, currentElem) => {
+  // checks
+  // console.log(tallyForThisOne);
+  // console.log(currentElem);
 
+  // long version:
+
+  // if (!tallyForThisOne[currentElem]) {
+  //   tallyForThisOne[currentElem] = 1;
+  // } else {
+  //   tallyForThisOne[currentElem]++;
+  // }
+
+  // short version:
+  tallyForThisOne[currentElem] = tallyForThisOne[currentElem] ? tallyForThisOne[currentElem] += 1 : 1;
+  
+  return tallyForThisOne;
+}, {});
+console.log(allTheVehicles);
 
 
 const devs = [
