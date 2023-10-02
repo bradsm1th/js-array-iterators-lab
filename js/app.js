@@ -44,6 +44,13 @@ const namesOnly = inventors.map(person =>
 
 // Array.prototype.sort()
 // 3. Sort the inventors by birth date (year property), in ascending order
+function compareBirthyears(personA, personB) {
+  return personA.year - personB.year;
+}
+
+let sortedInventors = inventors.sort(compareBirthyears);
+console.log(sortedInventors);
+
 
 
 // Array.prototype.find()
@@ -54,6 +61,18 @@ console.log(theAda);
 
 // Array.prototype.reduce()
 // 5. How many years did all the inventors live?
+
+
+// i can't get it with reduce, so here it is with forEach ¯\_(ツ)_/¯
+let totalYears = 0;
+inventors.forEach(person => {
+  let age = person.passed - person.year;
+  console.log(`${person.first} lived ${age} years`)
+  totalYears += age;
+});
+console.log(`They all lived ${totalYears} years…`);
+
+
 
 
 const people = [
@@ -145,6 +164,6 @@ console.log(comments.find(comment => comment.id === 823423));
 
 // Array.prototype.findIndex()
 // 11. Find the index of the comment with an id of 123523
-console.log(comments.findIndex(post => post.id === 823423));
+console.log(comments.findIndex(post => post.id === 123523));
 // …and log that comment, too
 console.log(comments[1].text);
