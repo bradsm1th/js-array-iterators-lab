@@ -37,10 +37,14 @@ console.log(oldies);
 // Array.prototype.map()
 // 2. Map the array of the inventors into a new array containing objects with just the first and last names as properties
 // Hint:  Return a new object literal from the callback (don't mutate the object being passed in to map)
-const namesOnly = inventors.map(person =>
-  console.log(person)
-);
-// console.log(namesOnly);
+const namesOnly = inventors.map(person => {
+  let newVersion = {}; 
+  newVersion.first = person.first;
+  newVersion.last = person.last;
+
+  return newVersion;
+});
+console.log(namesOnly);
 
 // Array.prototype.sort()
 // 3. Sort the inventors by birth date (year property), in ascending order
@@ -75,8 +79,6 @@ console.log("/////////// reduce() total years lived /////////");
 const reducedTotalYears = inventors.reduce((totalSoFar, thisObj) =>
   totalSoFar + (thisObj.passed - thisObj.year), 0);
 console.log(reducedTotalYears);
-
-
 
 
 
@@ -172,4 +174,4 @@ console.log(comments.find(comment => comment.id === 823423));
 // 11. Find the index of the comment with an id of 123523
 console.log(comments.findIndex(post => post.id === 123523));
 // …and log that comment, too
-console.log(comments[1].text);
+console.log(`\t(and the comment is "${comments[1].text}")`);
