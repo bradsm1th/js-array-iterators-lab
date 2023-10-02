@@ -113,11 +113,11 @@ const comments = [
 
 // Array.prototype.find()
 // 10. Find the comment with the id of 823423
-
+console.log(comments.find(comment => comment.id === 823423));
 
 
 // Array.prototype.findIndex()
 // 11. Find the index of the comment with an id of 123523
 console.log(comments.findIndex(post => post.id === 823423));
-// …and log that ocmment, too
+// …and log that comment, too
 console.log(comments[1].text);
