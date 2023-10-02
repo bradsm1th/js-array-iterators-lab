@@ -118,3 +118,6 @@ const comments = [
 
 // Array.prototype.findIndex()
 // 11. Find the index of the comment with an id of 123523
+console.log(comments.findIndex(post => post.id === 823423));
+// …and log that ocmment, too
+console.log(comments[1].text);
