@@ -97,14 +97,14 @@ const devs = [
 // Array.prototype.some()
 // 8. Check if at least one person is 19 or older?
 // Hint: To get today's year, use the getFullYear method of new Date(), i.e., new Date().getFullYear()
-
+let currentYear = new Date().getFullYear();
+console.log((devs.some(dev => currentYear - dev.year > 18)) ? "Yup, at least one of them is 19" : "Nope, everybody's younger than 19");
 
 // Array.prototype.every()
 // 9. Check if everyone is 19 or older?
-let currentYear = 2023;
+// let currentYear = 2023;
 // OR use Date object
-// let currentYear = new Date().getFullYear();
-console.log((devs.every(dev => currentYear - dev.year > 18)) ? "Yup, they're all at least 19" : "Nope, somebody's younger than 19");
+console.log((devs.every(dev => currentYear - dev.year > 18)) ? "Yup, they're all at least 19" : "Nope, at least one of them is younger than 19");
 
 
 const comments = [
