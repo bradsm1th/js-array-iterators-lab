@@ -101,6 +101,10 @@ const devs = [
 
 // Array.prototype.every()
 // 9. Check if everyone is 19 or older?
+let currentYear = 2023;
+// OR use Date object
+// let currentYear = new Date().getFullYear();
+console.log((devs.every(dev => currentYear - dev.year > 18)) ? "Yup, they're all at least 19" : "Nope, somebody's younger than 19");
 
 
 const comments = [
