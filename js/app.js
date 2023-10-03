@@ -174,4 +174,4 @@ console.log(comments.find(comment => comment.id === 823423));
 // 11. Find the index of the comment with an id of 123523
 console.log(comments.findIndex(post => post.id === 123523));
 // …and log that comment, too
-console.log(`\t(and the comment is "${comments[1].text}")`);
+console.log(`\t(and the comment is "${comments[1].text}")`);  
